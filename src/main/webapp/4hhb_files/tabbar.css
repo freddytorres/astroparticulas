@@ -1,0 +1,138 @@
+/* Structure Tabs
+-------------------------------------------------- */
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    color: #fff;
+    cursor: default;
+    background-color: #5E6973;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+#structuretabs >li.active>a,
+#structuretabs >li.active>a:hover,
+#structuretabs >li.active>a:focus {
+    background-color: #325880;
+    border: 1px solid transparent;
+    border-bottom: none;
+}
+
+#structuretabs {
+    border-bottom: 5px solid #325880;
+}
+
+#structuretabs >li {
+    margin-bottom: 0;
+}
+
+#structuretabs >li>a {
+    background-color: #EFEDED;
+    border-bottom: none;
+}
+
+#navbar-collapse-SSP {
+    padding: 0;
+    margin: 0;
+}
+
+.secondaryheader h1 {
+    float: left;
+    margin-right: 10px;
+
+}
+
+.secondaryheader h4 {
+    margin-top: 30px;
+}
+
+#entitynext {
+    margin-top: 10px;
+    background-color: #416D93;
+}
+
+
+
+.panel-default>.panel-heading {
+    color: #fff;
+    background-color: #5E6973;
+    border-color: #ddd;
+}
+
+/* MACROMOLECULE HIGHLIGHTS */
+table .highlight td {
+    background-color: #FFF2E0;
+}
+
+/* MACROMOLECULE HIGHLIGHTS */
+table td ul {
+    -webkit-padding-start: 15px;
+}
+
+
+.noteSearchQuery {
+    margin-bottom: 0;
+    padding: 5px;
+}
+.querySearchLink {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+table tr td button {
+    margin: 4px 1px;
+}
+
+table thead .externalannotation>th {
+    background-color: #f0ad4e;
+    color: #fff;
+    border-bottom-width: 1px;
+    font-weight: normal;
+}
+
+#structuretabs .dropdown .dropdown-menu {
+    min-width: 100%;
+}
+
+/* Mobile */
+
+/* --------- MOBILE PHONE FORM FACTOR --------- */
+@media screen and (max-width: 767px) {
+
+    #collapsedHeader > div {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #SSP-collapsed-tabs {
+        background-color: #EFEDED;
+        margin-top: 0;
+        border: 1px solid #ccc;
+    }
+
+    #navbar-collapse-SSP {
+        width: 100%;
+        margin: 0;
+    }
+
+    #structuretabs {
+        border: 0;
+    }
+
+    #structuretabs li {
+        width: 100%;
+    }
+
+    #collapsedHeader h1 {
+        float: left;
+        width: 100%;
+    }
+
+    #ProductPrimaryActions {
+        float: left;
+        width: 100%;
+    }
+
+
+}

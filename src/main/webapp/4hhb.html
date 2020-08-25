@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><!-- Google Analytics - needs to be at top of page, or else it does not work--><script type="text/javascript" async="" src="4hhb_files/analytics.js"></script><script src="4hhb_files/js" async=""></script><script>// global rcsb-config object
+var RC = {
+      googleAnalyticsTrackingId: 'UA-3923365-3'
+    , instance: 'production'
+    , isProductionServer: true
+    , dataUrl: 'https://data.rcsb.org/'
+    , MOLSTAR_IMG_URL: '//cdn.rcsb.org/images/structures/'
+};</script><script>!function(){if("performance"in window==0&&(window.performance={}),Date.now=Date.now||function(){return(new Date).getTime()},"now"in window.performance==0){var n=Date.now();performance.timing&&performance.timing.navigationStart&&(n=performance.timing.navigationStart),window.performance.now=function(){return Date.now()-n}}}();(function(){var h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k="function"==typeof Object.defineProperties?Object.defineProperty:function(a,b,c){a!=Array.prototype&&a!=Object.prototype&&(a[b]=c.value)};function l(){l=function(){};h.Symbol||(h.Symbol=m)}var n=0;function m(a){return"jscomp_symbol_"+(a||"")+n++}
+    function p(){l();var a=h.Symbol.iterator;a||(a=h.Symbol.iterator=h.Symbol("iterator"));"function"!=typeof Array.prototype[a]&&k(Array.prototype,a,{configurable:!0,writable:!0,value:function(){return q(this)}});p=function(){}}function q(a){var b=0;return r(function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}})}function r(a){p();a={next:a};a[h.Symbol.iterator]=function(){return this};return a}function t(a){p();var b=a[Symbol.iterator];return b?b.call(a):q(a)}
+    function u(a){if(!(a instanceof Array)){a=t(a);for(var b,c=[];!(b=a.next()).done;)c.push(b.value);a=c}return a}var v=0;function w(a,b){var c=XMLHttpRequest.prototype.send,d=v++;XMLHttpRequest.prototype.send=function(f){for(var e=[],g=0;g<arguments.length;++g)e[g-0]=arguments[g];var E=this;a(d);this.addEventListener("readystatechange",function(){4===E.readyState&&b(d)});return c.apply(this,e)}}
+    function x(a,b){var c=fetch;fetch=function(d){for(var f=[],e=0;e<arguments.length;++e)f[e-0]=arguments[e];return new Promise(function(d,e){var g=v++;a(g);c.apply(null,[].concat(u(f))).then(function(a){b(g);d(a)},function(a){b(a);e(a)})})}}var y="img script iframe link audio video source".split(" ");function z(a,b){a=t(a);for(var c=a.next();!c.done;c=a.next())if(c=c.value,b.includes(c.nodeName.toLowerCase())||z(c.children,b))return!0;return!1}
+    function A(a){var b=new MutationObserver(function(c){c=t(c);for(var b=c.next();!b.done;b=c.next())b=b.value,"childList"==b.type&&z(b.addedNodes,y)?a(b):"attributes"==b.type&&y.includes(b.target.tagName.toLowerCase())&&a(b)});b.observe(document,{attributes:!0,childList:!0,subtree:!0,attributeFilter:["href","src"]});return b}
+    function B(a,b){if(2<a.length)return performance.now();var c=[];b=t(b);for(var d=b.next();!d.done;d=b.next())d=d.value,c.push({timestamp:d.start,type:"requestStart"}),c.push({timestamp:d.end,type:"requestEnd"});b=t(a);for(d=b.next();!d.done;d=b.next())c.push({timestamp:d.value,type:"requestStart"});c.sort(function(a,b){return a.timestamp-b.timestamp});a=a.length;for(b=c.length-1;0<=b;b--)switch(d=c[b],d.type){case "requestStart":a--;break;case "requestEnd":a++;if(2<a)return d.timestamp;break;default:throw Error("Internal Error: This should never happen");
+    }return 0}function C(a){a=a?a:{};this.w=!!a.useMutationObserver;this.u=a.minValue||null;a=window.__tti&&window.__tti.e;var b=window.__tti&&window.__tti.o;this.a=a?a.map(function(a){return{start:a.startTime,end:a.startTime+a.duration}}):[];b&&b.disconnect();this.b=[];this.f=new Map;this.j=null;this.v=-Infinity;this.i=!1;this.h=this.c=this.s=null;w(this.m.bind(this),this.l.bind(this));x(this.m.bind(this),this.l.bind(this));D(this);this.w&&(this.h=A(this.B.bind(this)))}
+    C.prototype.getFirstConsistentlyInteractive=function(){var a=this;return new Promise(function(b){a.s=b;"complete"==document.readyState?F(a):window.addEventListener("load",function(){F(a)})})};function F(a){a.i=!0;var b=0<a.a.length?a.a[a.a.length-1].end:0,c=B(a.g,a.b);G(a,Math.max(c+5E3,b))}
+    function G(a,b){!a.i||a.v>b||(clearTimeout(a.j),a.j=setTimeout(function(){var b=performance.timing.navigationStart,d=B(a.g,a.b),b=(window.a&&window.a.A?1E3*window.a.A().C-b:0)||performance.timing.domContentLoadedEventEnd-b;if(a.u)var f=a.u;else performance.timing.domContentLoadedEventEnd?(f=performance.timing,f=f.domContentLoadedEventEnd-f.navigationStart):f=null;var e=performance.now();null===f&&G(a,Math.max(d+5E3,e+1E3));var g=a.a;5E3>e-d?d=null:(d=g.length?g[g.length-1].end:b,d=5E3>e-d?null:Math.max(d,
+        f));d&&(a.s(d),clearTimeout(a.j),a.i=!1,a.c&&a.c.disconnect(),a.h&&a.h.disconnect());G(a,performance.now()+1E3)},b-performance.now()),a.v=b)}
+    function D(a){a.c=new PerformanceObserver(function(b){b=t(b.getEntries());for(var c=b.next();!c.done;c=b.next())if(c=c.value,"resource"===c.entryType&&(a.b.push({start:c.fetchStart,end:c.responseEnd}),G(a,B(a.g,a.b)+5E3)),"longtask"===c.entryType){var d=c.startTime+c.duration;a.a.push({start:c.startTime,end:d});G(a,d+5E3)}});a.c.observe({entryTypes:["longtask","resource"]})}C.prototype.m=function(a){this.f.set(a,performance.now())};C.prototype.l=function(a){this.f.delete(a)};
+    C.prototype.B=function(){G(this,performance.now()+5E3)};h.Object.defineProperties(C.prototype,{g:{configurable:!0,enumerable:!0,get:function(){return[].concat(u(this.f.values()))}}});var H={getFirstConsistentlyInteractive:function(a){a=a?a:{};return"PerformanceLongTaskTiming"in window?(new C(a)).getFirstConsistentlyInteractive():Promise.resolve(null)}};
+    "undefined"!=typeof module&&module.exports?module.exports=H:"function"===typeof define&&define.amd?define("ttiPolyfill",[],function(){return H}):window.ttiPolyfill=H;})();!function(t,e){"use strict";function n(t){this.time=t.time,this.target=t.target,this.rootBounds=t.rootBounds,this.boundingClientRect=t.boundingClientRect,this.intersectionRect=t.intersectionRect||a(),this.isIntersecting=!!t.intersectionRect;var e=this.boundingClientRect,n=e.width*e.height,o=this.intersectionRect,i=o.width*o.height;this.intersectionRatio=n?i/n:this.isIntersecting?1:0}function o(t,e){var n=e||{};if("function"!=typeof t)throw new Error("callback must be a function");if(n.root&&1!=n.root.nodeType)throw new Error("root must be an Element");this._checkForIntersections=r(this._checkForIntersections.bind(this),this.THROTTLE_TIMEOUT),this._callback=t,this._observationTargets=[],this._queuedEntries=[],this._rootMarginValues=this._parseRootMargin(n.rootMargin),this.thresholds=this._initThresholds(n.threshold),this.root=n.root||null,this.rootMargin=this._rootMarginValues.map(function(t){return t.value+t.unit}).join(" ")}function i(){return t.performance&&performance.now&&performance.now()}function r(t,e){var n=null;return function(){n||(n=setTimeout(function(){t(),n=null},e))}}function s(t,e,n,o){"function"==typeof t.addEventListener?t.addEventListener(e,n,o||!1):"function"==typeof t.attachEvent&&t.attachEvent("on"+e,n)}function h(t,e,n,o){"function"==typeof t.removeEventListener?t.removeEventListener(e,n,o||!1):"function"==typeof t.detatchEvent&&t.detatchEvent("on"+e,n)}function c(t,e){var n=Math.max(t.top,e.top),o=Math.min(t.bottom,e.bottom),i=Math.max(t.left,e.left),r=Math.min(t.right,e.right),s=r-i,h=o-n;return s>=0&&h>=0&&{top:n,bottom:o,left:i,right:r,width:s,height:h}}function u(t){var e;try{e=t.getBoundingClientRect()}catch(t){}return e?(e.width&&e.height||(e={top:e.top,right:e.right,bottom:e.bottom,left:e.left,width:e.right-e.left,height:e.bottom-e.top}),e):a()}function a(){return{top:0,bottom:0,left:0,right:0,width:0,height:0}}function l(t,e){for(var n=e;n;){if(n==t)return!0;n=p(n)}return!1}function p(t){var e=t.parentNode;return e&&11==e.nodeType&&e.host?e.host:e}if("IntersectionObserver"in t&&"IntersectionObserverEntry"in t&&"intersectionRatio"in t.IntersectionObserverEntry.prototype)return void("isIntersecting"in t.IntersectionObserverEntry.prototype||Object.defineProperty(t.IntersectionObserverEntry.prototype,"isIntersecting",{get:function(){return this.intersectionRatio>0}}));var f=[];o.prototype.THROTTLE_TIMEOUT=100,o.prototype.POLL_INTERVAL=null,o.prototype.USE_MUTATION_OBSERVER=!0,o.prototype.observe=function(t){if(!this._observationTargets.some(function(e){return e.element==t})){if(!t||1!=t.nodeType)throw new Error("target must be an Element");this._registerInstance(),this._observationTargets.push({element:t,entry:null}),this._monitorIntersections(),this._checkForIntersections()}},o.prototype.unobserve=function(t){this._observationTargets=this._observationTargets.filter(function(e){return e.element!=t}),this._observationTargets.length||(this._unmonitorIntersections(),this._unregisterInstance())},o.prototype.disconnect=function(){this._observationTargets=[],this._unmonitorIntersections(),this._unregisterInstance()},o.prototype.takeRecords=function(){var t=this._queuedEntries.slice();return this._queuedEntries=[],t},o.prototype._initThresholds=function(t){var e=t||[0];return Array.isArray(e)||(e=[e]),e.sort().filter(function(t,e,n){if("number"!=typeof t||isNaN(t)||t<0||t>1)throw new Error("threshold must be a number between 0 and 1 inclusively");return t!==n[e-1]})},o.prototype._parseRootMargin=function(t){var e=t||"0px",n=e.split(/\s+/).map(function(t){var e=/^(-?\d*\.?\d+)(px|%)$/.exec(t);if(!e)throw new Error("rootMargin must be specified in pixels or percent");return{value:parseFloat(e[1]),unit:e[2]}});return n[1]=n[1]||n[0],n[2]=n[2]||n[0],n[3]=n[3]||n[1],n},o.prototype._monitorIntersections=function(){this._monitoringIntersections||(this._monitoringIntersections=!0,this.POLL_INTERVAL?this._monitoringInterval=setInterval(this._checkForIntersections,this.POLL_INTERVAL):(s(t,"resize",this._checkForIntersections,!0),s(e,"scroll",this._checkForIntersections,!0),this.USE_MUTATION_OBSERVER&&"MutationObserver"in t&&(this._domObserver=new MutationObserver(this._checkForIntersections),this._domObserver.observe(e,{attributes:!0,childList:!0,characterData:!0,subtree:!0}))))},o.prototype._unmonitorIntersections=function(){this._monitoringIntersections&&(this._monitoringIntersections=!1,clearInterval(this._monitoringInterval),this._monitoringInterval=null,h(t,"resize",this._checkForIntersections,!0),h(e,"scroll",this._checkForIntersections,!0),this._domObserver&&(this._domObserver.disconnect(),this._domObserver=null))},o.prototype._checkForIntersections=function(){var t=this._rootIsInDom(),e=t?this._getRootRect():a();this._observationTargets.forEach(function(o){var r=o.element,s=u(r),h=this._rootContainsTarget(r),c=o.entry,a=t&&h&&this._computeTargetAndRootIntersection(r,e),l=o.entry=new n({time:i(),target:r,boundingClientRect:s,rootBounds:e,intersectionRect:a});c?t&&h?this._hasCrossedThreshold(c,l)&&this._queuedEntries.push(l):c&&c.isIntersecting&&this._queuedEntries.push(l):this._queuedEntries.push(l)},this),this._queuedEntries.length&&this._callback(this.takeRecords(),this)},o.prototype._computeTargetAndRootIntersection=function(n,o){if("none"!=t.getComputedStyle(n).display){for(var i=u(n),r=i,s=p(n),h=!1;!h;){var a=null,l=1==s.nodeType?t.getComputedStyle(s):{};if("none"==l.display)return;if(s==this.root||s==e?(h=!0,a=o):s!=e.body&&s!=e.documentElement&&"visible"!=l.overflow&&(a=u(s)),a&&!(r=c(a,r)))break;s=p(s)}return r}},o.prototype._getRootRect=function(){var t;if(this.root)t=u(this.root);else{var n=e.documentElement,o=e.body;t={top:0,left:0,right:n.clientWidth||o.clientWidth,width:n.clientWidth||o.clientWidth,bottom:n.clientHeight||o.clientHeight,height:n.clientHeight||o.clientHeight}}return this._expandRectByRootMargin(t)},o.prototype._expandRectByRootMargin=function(t){var e=this._rootMarginValues.map(function(e,n){return"px"==e.unit?e.value:e.value*(n%2?t.width:t.height)/100}),n={top:t.top-e[0],right:t.right+e[1],bottom:t.bottom+e[2],left:t.left-e[3]};return n.width=n.right-n.left,n.height=n.bottom-n.top,n},o.prototype._hasCrossedThreshold=function(t,e){var n=t&&t.isIntersecting?t.intersectionRatio||0:-1,o=e.isIntersecting?e.intersectionRatio||0:-1;if(n!==o)for(var i=0;i<this.thresholds.length;i++){var r=this.thresholds[i];if(r==n||r==o||r<n!=r<o)return!0}},o.prototype._rootIsInDom=function(){return!this.root||l(e,this.root)},o.prototype._rootContainsTarget=function(t){return l(this.root||e,t)},o.prototype._registerInstance=function(){f.indexOf(this)<0&&f.push(this)},o.prototype._unregisterInstance=function(){var t=f.indexOf(this);-1!=t&&f.splice(t,1)},t.IntersectionObserver=o,t.IntersectionObserverEntry=n}(window,document);function gtag(){dataLayer.push(arguments)}var logger=function(){"use strict";function n(n){if(n=JSON.stringify(n),"sendBeacon"in navigator)navigator.sendBeacon(t,n);else{var e=new XMLHttpRequest;e.open("POST",t,!1),e.setRequestHeader("Content-Type","text/plain;charset=UTF-8"),e.send(n)}}function e(e,t,i){if(!RC.isProductionServer)switch(e){case"error":case"warn":case"info":i?console[e](t,i):console[e](t);break;default:console.log(t,i)}"error"!==e&&"warn"!==e||(r.push({level:e,msg:t||"",info:Object.assign({},i,{path:window.location.pathname,userAgent:navigator.userAgent})}),r.length>=o&&n(r.splice(0,o)))}var t="/analytics",o=10,r=[];return window.addEventListener("unload",function(){n(r)},!1),{stack:Function.prototype.bind.call(function(n){n&&e("error",n.name+': "'+n.message+'"',{type:n.name,description:n.message,trace:n.stack})}),error:Function.prototype.bind.call(function(n,t){e("error",n,t)}),warn:Function.prototype.bind.call(function(n,t){e("warn",n,t)}),info:Function.prototype.bind.call(function(n,t){e("info",n,t)}),verbose:Function.prototype.bind.call(function(n,t){e("verbose",n,t)}),debug:Function.prototype.bind.call(function(n,t){e("debug",n,t)}),silly:Function.prototype.bind.call(function(n,t){e("silly",n,t)})}}();window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config",RC.googleAnalyticsTrackingId),window.addEventListener("error",function(n){logger.stack(n.error)}),window.addEventListener("unhandledrejection",function(n){n&&n.reason&&logger.error('Unhandled promise rejection: "'+n.reason.message+'"',{type:"PromiseRejection",description:n.reason.message,trace:n.reason.stack})});var gtagFirstMeaningfulPaint=function(){var n=!1;return function(){n?logger.warn('Timing for "firstMeaningfulPaint" already sent'):(console.log("firstMeaningfulPaint",Math.round(performance.now())),n=!0)}}();!function(){"use strict";var n=0;if("PerformanceObserver"in window&&"PerformancePaintTiming"in window){new PerformanceObserver(function(e){e.getEntries().forEach(function(e){if(0===n){e.startTime,e.duration}})}).observe({entryTypes:["paint"]});var e=window.__tti={e:[]};e.o=new PerformanceObserver(function(n){e.e=e.e.concat(n.getEntries())}),e.o.observe({entryTypes:["longtask"]}),ttiPolyfill.getFirstConsistentlyInteractive({}).then(function(n){});new PerformanceObserver(function(n){n.getEntries().forEach(function(n){var e=n.attribution[0]||{},t={containerType:e.containerType,containerName:e.containerName,containerId:e.containerId,containerSrc:e.containerSrc,frameOrigin:n.name,durationMs:n.duration,startTimeMs:n.startTime};n.duration>500&&logger.warn("Long running task, duration "+n.duration.toFixed(2)+"ms.",t)})}).observe({entryTypes:["longtask"]})}var t=performance.now();window.addEventListener("visibilitychange",function(){document.hidden?t=performance.now():n+=performance.now()-t}),window.addEventListener("load",function(){performance.now()}),window.addEventListener("DOMContentLoaded",function(){performance.now()})}();var lazyImage=function(){var r=new IntersectionObserver(function(r){r.forEach(function(r){r.isIntersecting&&(r.target.src=r.target.getAttribute("data-src"))})},{root:null,rootMargin:"0px",threshold:[0]});return{observe:function(e){r.observe(e)},observeArray:function(e){for(var t=0,n=e.length;t<n;++t)r.observe(e[t])}}}();</script><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta http-equiv="Cache-Control" content="max-age=3600"><meta http-equiv="Cache-Control" content="private"><meta http-equiv="Cache-Control" content="must-revalidate"><meta http-equiv="Pragma" content="private"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="email" content="info@rcsb.org"><meta name="Charset" content="UTF-8"><meta name="Distribution" content="Global"><meta name="Rating" content="General"><meta http-equiv="content-language" content="en-US"><meta name="author" content="RCSB Protein Data Bank"><meta name="citation_author" content="RCSB Protein Data Bank"><style>.citation {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+}</style><link rel="manifest" href="https://www.rcsb.org/manifest.json"><link rel="apple-touch-icon" href="https://www.rcsb.org/img/rcsb-apple-touch-icon.jpg"><link rel="stylesheet" href="4hhb_files/font-awesome.css"><link rel="stylesheet" href="4hhb_files/main.css"><link rel="stylesheet" href="4hhb_files/search.css"><script>window.addEventListener('DOMContentLoaded', function () {
+    lazyImage.observeArray(document.querySelectorAll('img[data-src]'));
+}, false);
+
+window.addEventListener('load', function () {
+    // load the JIRA feedback button only after everything else has been loaded
+    var script = document.createElement("script");
+    script.src = "/js/jira-fdbck.js";
+    script.type = "text/javascript";
+    document.getElementsByTagName("head")[0].appendChild(script);
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "//cdn.rcsb.org/jira-feedback/css/jira-fdbck.css";
+    document.getElementsByTagName("head")[0].appendChild(link);
+    // load the ekko-lightbox css only after everything else has been loaded
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/css/ekko-lightbox.css";
+    document.getElementsByTagName("head")[0].appendChild(link);
+});
+</script><script src="4hhb_files/jquery-3.js"></script><script src="4hhb_files/bootstrap.js"></script><script src="4hhb_files/ekko-lightbox.js" defer="defer"></script><script src="4hhb_files/react.js"></script><script src="4hhb_files/reactDOM.js"></script><script src="4hhb_files/search-data"> </script><script src="4hhb_files/react-search.js"></script><script>$(document).delegate('*[data-toggle="lightbox"]',"click",function(t){t.preventDefault(),$(this).ekkoLightbox()});$(function(){$(".nav>.dropdown").on("mouseenter",function(o){$(this).addClass("open")}),$(".nav>.dropdown").on("mouseleave",function(o){$(".dropdown").removeClass("open")}),$('[data-toggle="tooltip"]').tooltip()});</script><link rel="stylesheet" href="4hhb_files/tabbar.css"><link rel="stylesheet" href="4hhb_files/ngl-ui.css"><script>// global vars
+var startTime = Date.now()
+var pdbid = '4hhb'
+var pdbidUc = '4HHB'
+var bionumber = '1'
+var preset = ''
+var sele = ''
+var debug = 0
+var reduced = false
+var structureData = {"atomSiteCount":4779,"entryId":"4HHB","hasEdMaps":false,"hasValidationReport":true,"title":"THE CRYSTAL STRUCTURE OF HUMAN DEOXYHAEMOGLOBIN AT 1.74 ANGSTROMS RESOLUTION","symmetry":[{"biologicalAssemblyId":1,"globalSymmetry":{"symmetry":"C2","symmetryAxes":[{"start":[0.011038231043628405,29.205920864699667,-0.06535185258488915],"end":[0.004464967746816024,-29.803542576850635,0.05761920690093318],"order":2}]},"pseudoSymmetry":{"symmetry":"D2","symmetryAxes":[{"start":[0.014413436583341524,32.923971729801266,-0.07756507087078712],"end":[0.00530715165195402,-33.9745232003895,0.07087757087079516],"order":2},{"start":[36.023937438677216,-0.525538786312672,0.7050609373105534],"end":[-36.004216850441914,-0.5250126842755581,-0.7117484373105454],"order":2},{"start":[-0.6479649327651126,-0.451064999605185,33.43943490630117],"end":[0.6676855210004081,-0.5994864709830452,-33.44612240630117],"order":2}]}}]}
+var viewerType = 'ngl'
+
+var blob, stage, initNglUi, resizeNglUi
+
+var xhr = new XMLHttpRequest()
+xhr.open('GET', '//mmtf.rcsb.org/v1.0/full/4hhb', true)
+xhr.addEventListener('load', function () {
+    blob = new Blob([new Uint8Array(xhr.response)], { type: 'application/octet-binary' })
+    if(stage && initNglUi) initNglUi()
+    else console.log('no stage or initNglUi')
+})
+xhr.responseType = 'arraybuffer'
+xhr.send(null)
+</script><script src="4hhb_files/jira-fdbck.js" type="text/javascript"></script><link rel="stylesheet" href="4hhb_files/jira-fdbck.css"><link rel="stylesheet" href="4hhb_files/ekko-lightbox.css"></head><body><nav class="navbar navbar-inverse navbar-fixed-top hidden-print" id="nav" role="navigation"><div class="hide hidden-print" id="UnsupportedBrowser" style="width: 100%; border-bottom: 2px solid #FFA500; background-color: #FFFFFF; color: #000000; display: inline-block; font-size: .9em; line-height: 2em; text-align: center; font-weight: bold; font-style: italic;"><span class="label label-warning" style="font-size: 100%;">Warning</span>
+        You are using a web browser that we do not support. Our website 
+will not work properly. Please update to a newer version or download a 
+new web browser, such as Chrome or Firefox.</div><div class="container"><div class="pull-right" id="mypdb-menu-container"><div style="margin-top: 10px;" class="dropdown pull-right"><button class="btn btn-info btn-sm dropdown-toggle" type="button" data-toggle="dropdown">MyPDB <span class="caret"></span></button><ul class="dropdown-menu" style="margin-top: 0px;"><li><a href="https://www.rcsb.org/auth/google"><img style="margin-right: 5px;" src="4hhb_files/google-sm.png">Sign in with Google</a></li><li><a href="https://www.rcsb.org/auth/facebook"><img style="margin-right: 5px;" src="4hhb_files/facebook-sm.png">Sign in with Facebook</a></li><li><a href="https://www.rcsb.org/auth/orcid"><img style="margin-right: 5px;" src="4hhb_files/orcid-sm.png">Sign in with ORCID</a></li><hr><li><a>Documentation</a></li></ul></div></div><!-- Brand and toggle get grouped for better mobile display--><div class="navbar-header"><button class="navbar-toggle pull-left" type="button" data-toggle="collapse" data-target="#navbar-collapse-RCSB"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="https://www.rcsb.org/">RCSB PDB</a></div><div class="collapse navbar-collapse" id="navbar-collapse-RCSB" style="max-height: 420px;"><ul class="nav navbar-nav pull-left"><li class="dropdown" id="headnav_deposit"><a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Deposit&nbsp;<b class="caret"></b></a><div class="dropdown-menu multi-column" id="DepositDropdownNav"><div class="row"><div class="col-xs-12 col-sm-2 col-md-2"><ul class="dropdown-menu" id="head-deposit_prepare"><li><h4>Prepare Data</h4></li><li><a href="https://www.wwpdb.org/deposition/preparing-pdbx-mmcif-files" target="_blank">PDBx/mmCIF file    </a></li><li><a href="http://pdb-extract.wwpdb.org/" target="_blank">pdb_extract</a></li><li><a href="http://sf-tool.wwpdb.org/" target="_blank">SF-Tool</a></li><li><a href="http://ligand-expo.rcsb.org/" target="_blank">Ligand Expo</a></li><li><a href="http://sw-tools.rcsb.org/apps/MAXIT/index.html" target="_blank">MAXIT</a></li></ul></div><div class="col-xs-12 col-sm-3 col-md-3"><ul class="dropdown-menu" id="head-deposit_validate"><li><h4>Validate Data</h4></li><li><a href="https://validate-rcsb.wwpdb.org/" target="_blank">Validation Server</a></li><li><a href="http://www.wwpdb.org/documentation/journals.php" target="_blank">Information for Journals</a></li><li><a href="http://www.wwpdb.org/task/validation-task-forces.php" target="_blank">Validation Task Forces</a></li></ul></div><div class="col-xs-12 col-sm-3 col-md-2"><ul class="dropdown-menu" id="head-deposit_deposit-data"><li><h4>Deposit Data</h4></li><li><a href="http://deposit.wwpdb.org/" target="_blank">wwPDB OneDep System</a></li><li><a href="https://pdb-dev.wwpdb.org/" target="_blank">PDB-Dev</a></li></ul></div><div class="col-xs-12 col-sm-2 col-md-3"><ul class="dropdown-menu" id="head-deposit_deposit-help"><li><h4>Deposition Help &amp; Resources</h4></li><li><a href="http://www.wwpdb.org/deposition/faq.php" target="_blank">Deposit FAQ</a></li><li><a href="http://www.wwpdb.org/deposition/tutorial.php" target="_blank">Tutorials</a></li><li><a href="http://www.wwpdb.org/documentation/policy" target="_blank">Annotation Policies</a></li><li><a href="http://www.wwpdb.org/documentation/procedure" target="_blank">Processing Procedures</a></li><li class="divider hidden-xs"></li><li><a href="http://mmcif.wwpdb.org/" target="_blank">PDBx/mmCIF Dictionary</a></li><li><a href="http://wwpdb.org/data/ccd" target="_blank">Chemical Component Dictionary</a></li><li><a href="http://www.wwpdb.org/documentation/file-format.php" target="_blank">PDB Format Guide</a></li><li><a href="http://biosync.sbkb.org/" target="_blank">BioSync Beamlines/Facilities</a></li><li><a href="http://sw-tools.rcsb.org/" target="_blank">Related Tools</a></li></ul></div></div></div></li><li class="dropdown" id="headnav_search"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Search&nbsp;<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="https://www.rcsb.org/pages/search_features">Basic Search</a></li><li><a href="https://www.rcsb.org/pages/search_features#search_advanced-search">Advanced Search</a></li><li><a href="https://www.rcsb.org/pages/search_features#search_sequences">Sequence Search</a></li><li><a href="https://www.rcsb.org/pages/search_features#search_unreleased-and-new">Unreleased &amp; New Entries</a></li><li><a href="https://www.rcsb.org/pages/search_features#search_annotation">Browse Annotations</a></li><li><a href="https://www.rcsb.org/pages/search_features#search_drilldown">Explore the Archive</a></li><li><a href="https://www.rcsb.org/pages/search_features#search_statistics">PDB Statistics</a></li><li><a href="https://www.rcsb.org/pages/search_features#search_ligands">Ligands</a></li><li><a href="https://www.rcsb.org/pages/search_features#search_drugs">Drugs &amp; Drug Targets</a></li></ul></li><li class="dropdown" id="headnav_visualize"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Visualize&nbsp;<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="https://www.rcsb.org/pages/visualize_features#visualize_3dviewers">Visualize 3D Viewer</a></li><li><a href="https://www.rcsb.org/pages/visualize_features#visualize_seq-proteinfeatures">Protein Feature View</a></li><li><a href="https://www.rcsb.org/pages/visualize_features#visualize_seq-genome">Human Gene View</a></li><li><a href="https://www.rcsb.org/pages/visualize_features#visualize_pathway">Pathway View</a></li></ul></li><li class="dropdown" id="headnav_analyze"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Analyze&nbsp;<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="https://www.rcsb.org/pages/analyze_features#Sequence">Sequence &amp; Structure Alignment</a></li><li><a href="https://www.rcsb.org/pages/analyze_features#Symmetry">Protein Symmetry</a></li><li><a href="https://www.rcsb.org/pages/analyze_features#Quality">Structure Quality</a></li><li><a href="https://www.rcsb.org/pdb/chromosome.do">Map Genomic Position to Protein</a></li><li><a href="https://www.rcsb.org/stats">PDB Statistics</a></li><li><a href="https://www.rcsb.org/pages/analyze_features#Assemblies">EPPIC Biological Assemblies</a></li><li class="divider hidden-xs"></li><li><a href="https://www.rcsb.org/pages/external-resources">Integrated Resources</a></li><li><a href="https://www.rcsb.org/pages/thirdparty">Third Party Tools</a></li></ul></li><li class="dropdown hidden-xs hidden-sm" id="headnav_download"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Download&nbsp;<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="https://www.rcsb.org/downloads">Coordinates &amp; Experimental Data</a></li><li><a href="https://www.rcsb.org/downloads/fasta">Sequences</a></li><li><a href="https://www.rcsb.org/pages/download_features#Ligands">Ligands</a></li><li><a href="https://www.rcsb.org/pages/download/ftp">FTP Archive &amp; Services</a></li><li><a href="https://www.rcsb.org/pages/download/http">HTTPS Services</a></li><li><a href="https://www.rcsb.org/pdb/secondary.do?p=v2/secondary/other_download.jsp">Other Services</a></li><li><a href="https://www.rcsb.org/pages/webservices">Web Services</a></li></ul></li><li class="dropdown" id="headnav_learn"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Learn&nbsp;<b class="caret"></b></a><ul class="dropdown-menu"><li class="hidden-xs"><h4><a href="http://pdb101.rcsb.org/" target="_blank"><img class="image_submenu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="https://cdn.rcsb.org/rcsb-pdb/v2/common/images/pdb101Logo.png"></a></h4></li><li><a href="http://pdb101.rcsb.org/more/about-pdb-101" target="_blank">About</a></li><li><a href="http://pdb101.rcsb.org/motm/motm-by-title" target="_blank">Molecule of the Month</a></li><li><a href="http://pdb101.rcsb.org/browse" target="_blank">Browse all Resources</a></li><li><a href="http://pdb101.rcsb.org/learn/paper-models" target="_blank">Educational Resources</a></li><li><a href="http://pdb101.rcsb.org/teach/overview" target="_blank">Curricula</a></li><li><a href="http://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data" target="_blank">Guide to PDB Data</a></li><li><a href="http://pdb101.rcsb.org/news" target="_blank">News and Events</a></li></ul></li><li class="dropdown" id="headnav_more"><a class="dropdown-toggle" href="#" data-toggle="dropdown">More&nbsp;<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="https://www.rcsb.org/pages/contactus">Contact Us</a></li><li><a href="https://www.rcsb.org/pages/policies#References">Citing Us</a></li><li><a href="https://www.rcsb.org/pages/policies">Policies</a></li><li><a href="https://www.rcsb.org/pages/help/index">Help Topics</a></li><li><a href="https://www.rcsb.org/pages/about-us/index">About RCSB PDB</a></li><li><a href="https://www.rcsb.org/pages/about-us/history">PDB History</a></li><li><a href="https://www.rcsb.org/pages/team">Team Members</a></li><li><a href="https://www.rcsb.org/pages/advisory-committee">Advisory Committee</a></li><li><a href="https://www.rcsb.org/pages/news">News</a></li><li><a href="https://www.rcsb.org/pages/publications">Publications</a></li><li><a href="https://www.rcsb.org/pages/jobs">Careers</a></li></ul></li><li class="dropdown visible-xs"><div id="socialmedia_section_mobile"><ul class="fa-ul hidden-print"><li><a href="https://www.facebook.com/RCSBPDB" target="_blank" title="" data-placement="top" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook-square fa-lg"></i></a></li><li><a href="https://twitter.com/buildmodels" target="_blank" title="" data-placement="top" data-toggle="tooltip" data-original-title="Twitter"><i class="fa fa-twitter fa-lg"></i></a></li><li><a href="https://www.youtube.com/user/RCSBProteinDataBank" target="_blank" title="" data-placement="top" data-toggle="tooltip" data-original-title="YouTube"><i class="fa fa-youtube-play fa-lg"></i></a></li><li><a href="https://github.com/rcsb" target="_blank" title="" data-placement="top" data-toggle="tooltip" data-original-title="Github"><i class="fa fa-github fa-lg"></i></a></li></ul></div></li></ul></div></div></nav><style>.survey {
+    padding: 0 1px 0 0;
+    background: #f0ad4e;
+    border: 1px solid #eea236;
+    bottom: -30px;
+    position: absolute;
+    right: 102px;
+    margin-left: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.survey li a:hover {
+    text-decoration: none;
+}
+.survey:hover {
+    background-color: #d58512;
+    border: 1px solid #d38b23;
+}
+.beta-test {
+    background: #325880;
+    color: #FE9A2E;
+    padding: 3px 15px;
+    height: 26px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: absolute;
+    bottom: -32px;
+    right: 110px;
+    list-style-type: none;
+}
+.instance {
+    background: #325880;
+    color: #cef;
+    padding: 3px 15px;
+    height: 26px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: absolute;
+    bottom: -32px;
+    right: 110px;
+    list-style-type: none;
+    font-size: 12px;
+    line-height: 22px;
+}
+</style><div id="header"><div class="container"><div class="row"><div class="col-sm-12 col-md-6 col-lg-5" id="logo_container"><a href="https://www.rcsb.org/"><img id="rcsblogo" src="4hhb_files/rcsb_logo.png" data-src="https://cdn.rcsb.org/rcsb-pdb/v2/common/images/rcsb_logo.png" alt="RCSB PDB"></a><h2 class="hidden-xs" id="tagline"><a id="CurrentStructureCount" href="https://www.rcsb.org/search?q=*"> 167780 </a>Biological Macromolecular Structures Enabling Breakthroughs in Research and Education</h2><div class="clearfix"></div></div><!-- search bar--><div class="col-xs-12 col-sm-12 col-md-6 col-lg-7 hidden-print" id="search-bar-container"><div id="search-bar-component" class="search-bar"><div id="menu-container-19b8bc2f-4523-458c-958c-c769dbed7365"><table class="search-bar-table"><tr><td class="search-bar-input"><input type="text" id="search-bar-input-text" placeholder="Enter search term(s)" autocomplete="off" spellcheck="false"></td><td><div id="search-icon"><span class="glyphicon glyphicon-search search-btn"></span></div></td></tr></table></div><div id="search-bar-links"><a>Advanced Search</a><div style="width: 5px; display: inline-block;"></div>|<div style="width: 5px; display: inline-block;"></div><a>Browse Annotations</a></div></div></div></div><ul class="hidden-xs hidden-print" id="PDBmembers"><li><a href="http://pdb101.rcsb.org/"><img id="pdb101logo" src="4hhb_files/pdb101Logo.png" data-src="https://cdn.rcsb.org/rcsb-pdb/v2/common/images/pdb101Logo.png" alt="PDB-101"></a></li><li><a href="http://www.wwpdb.org/" target="_blank"><img id="wwpdblogo" src="4hhb_files/Logo_wwpdb.png" data-src="https://cdn.rcsb.org/rcsb-pdb/v2/common/images/Logo_wwpdb.png" alt="wwPDB"></a></li><li><a href="https://www.emdataresource.org/" target="_blank"><img id="emdatabanklogo" src="4hhb_files/EMDataResourcelogo.png" data-src="https://cdn.rcsb.org/rcsb-pdb/v2/common/images/EMDataResourcelogo.png" alt="EMDataResource"></a></li><li><a href="http://ndbserver.rutgers.edu/" target="_blank"><img id="ndblogo" src="4hhb_files/Logo_NDB.png" data-src="https://cdn.rcsb.org/rcsb-pdb/v2/common/images/Logo_NDB.png" alt="NDB Nucleic Acid Database"></a></li><li><a href="http://foundation.wwpdb.org/" target="_blank"><img id="wwpdbfoundationlogo" src="4hhb_files/Logo_wwPDBFoundation.png" data-src="https://cdn.rcsb.org/rcsb-pdb/v2/common/images/Logo_wwPDBFoundation.png" alt="wwPDB Foundation"></a></li></ul><div id="socialmedia_section"><ul class="fa-ul hidden-print"><li><a href="https://www.facebook.com/RCSBPDB" target="_blank" title="" data-placement="top" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook-square fa-lg"></i></a></li><li><a href="https://twitter.com/buildmodels" target="_blank" title="" data-placement="top" data-toggle="tooltip" data-original-title="Twitter"><i class="fa fa-twitter fa-lg"></i></a></li><li><a href="https://www.youtube.com/user/RCSBProteinDataBank" target="_blank" title="" data-placement="top" data-toggle="tooltip" data-original-title="YouTube"><i class="fa fa-youtube-play fa-lg"></i></a></li><li><a href="https://github.com/rcsb" target="_blank" title="" data-placement="top" data-toggle="tooltip" data-original-title="Github"><i class="fa fa-github fa-lg"></i></a></li></ul></div></div></div><div class="container" id="maincontentcontainer"><button class="navbar-toggle pull-left" id="SSP-collapsed-tabs" type="button" data-toggle="collapse" data-target="#navbar-collapse-SSP"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> Navigation Tabs</button><div class="collapse navbar-collapse" id="navbar-collapse-SSP"><ul class="nav nav-tabs hidden-print" id="structuretabs" role="tablist"><li id="structuresummarytab" role="presentation"><a href="https://www.rcsb.org/structure/4hhb">Structure Summary</a></li><li class="active" id="3dviewtab" role="presentation"><a href="https://www.rcsb.org/3d-view/4hhb">3D View</a></li><li id="annotationstab" role="presentation"><a href="https://www.rcsb.org/Annotations/4hhb">Annotations</a></li><li id="MoreOptions-Method" role="presentation"><a href="https://www.rcsb.org/experimental/4hhb">Experiment</a></li><li id="sequencetab" role="presentation"><a href="https://www.rcsb.org/sequence/4hhb">Sequence</a></li><!--+tab( 'Sequence', '/pdb/explore/remediatedSequence.do?structureId=' + entryId, 'Sequence' )--><!--+tab( 'MoreOptions-Method', '/experimental/' + entryId, 'Experiment' )--></ul></div><br><div><!-- pdbid and display-file/download-files buttons--><div class="row" id="pdbid-and-buttons"><div class="col-xs-12 col-sm-6"><h1 style="margin:0">4HHB</h1></div><div class="col-xs-12 col-sm-6" style="padding-top:5px;"><div class="pull-right btn-group" id="ProductPrimaryActions" role="group"><div class="btn-group" id="DisplayFilesButton" role="group"><button class="btn btn-sm btn-default dropdown-toggle" id="dropdownMenuDisplayFiles" type="button" data-toggle="dropdown" aria-expanded="false"><span class="fa fa-file" aria-hidden="true"></span>&nbsp;Display Files&nbsp;<span class="caret"></span></button><ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenuDisplayFiles"><li><a target="_blank" href="https://www.rcsb.org/fasta/entry/4hhb/display">FASTA Sequence</a></li><li class="divider"></li><li><a target="_blank" href="https://files.rcsb.org/view/4hhb.pdb">PDB Format</a></li><li><a target="_blank" href="https://files.rcsb.org/header/4hhb.pdb">PDB Format (Header)</a></li><li class="divider"></li><li><a target="_blank" href="https://files.rcsb.org/view/4hhb.cif">mmCIF Format</a></li><li><a target="_blank" href="https://files.rcsb.org/header/4hhb.cif">mmCIF Format (Header)</a></li></ul></div><div class="btn-group" id="DownloadFilesButton" role="group"><button class="btn btn-sm btn-primary dropdown-toggle" id="dropdownMenuDownloadFiles" type="button" data-toggle="dropdown" aria-expanded="false"><span class="fa fa-arrow-circle-o-down" aria-hidden="true" style="font-size: 14px;"></span>&nbsp;Download Files&nbsp;<span class="caret"></span></button><ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenuDownloadFiles"><li><a href="https://www.rcsb.org/fasta/entry/4hhb">FASTA Sequence</a></li><li class="divider"></li><li><a href="https://files.rcsb.org/download/4hhb.pdb">PDB Format</a></li><li><a href="https://files.rcsb.org/download/4hhb.pdb.gz">PDB Format (gz)</a></li><li class="divider"></li><li><a href="https://files.rcsb.org/download/4hhb.cif">PDBx/mmCIF Format</a></li><li><a href="https://files.rcsb.org/download/4hhb.cif.gz">PDBx/mmCIF Format (gz)</a></li><li class="divider"></li><li><a href="https://files.rcsb.org/download/4hhb.xml.gz">PDBML/XML Format (gz)</a></li><li class="divider"></li><li><a href="https://files.rcsb.org/download/4HHB.pdb1.gz">Biological Assembly 1</a></li></ul></div></div></div></div><h4>THE CRYSTAL STRUCTURE OF HUMAN DEOXYHAEMOGLOBIN AT 1.74 ANGSTROMS RESOLUTION</h4><div class="row" id="ngl-ui"><div class="col-lg-9 col-md-8 col-sm-12 col-xs-12"><div id="stageHeader">Note: Use your mouse to drag, rotate, and zoom in and out of the structure. Mouse-over to identify atoms and bonds. <a href="https://www.rcsb.org/pages/help/3dview#mouse-controls" target="_blank">Mouse controls documentation</a>.</div><div id="stagePanel"><div class="progress" id="loading" style="width: 422.25px; top: 237.517px; left: 211.125px; display: none;"><div class="progress-bar progress-bar-warning progress-bar-striped active" id="progressBar" style="width: 422.25px;">Loading 4HHB data...</div></div><div id="stageViewport" style="height: 475.031px; overflow: hidden;"><div style="position: relative;"><canvas width="844" height="475" style="width: 844.5px; height: 475.033px; background-color: rgb(255, 255, 255); touch-action: none; outline: currentcolor none medium;" tabindex="-1"></canvas></div><div style="display: block; position: fixed; z-index: 1000000; pointer-events: none; background-color: rgba(0, 0, 0, 0.6); color: lightgrey; padding: 8px; font-family: sans-serif; bottom: 331px; left: 942px;">atom: [VAL]60:D.CA ()</div></div></div><div id="viewer"><div><button id="spin" class="off"><span>Spin</span><span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Start/stop spinning the structure along the y-axis"></span></button><button id="center" class="off"><span>Center</span><span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Reset molecule position"></span></button><span><button id="fullscreen" class="off"><span>Fullscreen</span><span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Activate/disable fullscreen mode"></span></button><button id="screenshot" class="off"><span>Screenshot</span><span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Download screenshot at twice the displayed resolution"></span></button></span><div class="inline"><select class="form-control input-sm" id="select-cameraType"><option value="perspective" selected="selected">Perspective Camera</option><option value="orthographic">Orthographic Camera</option></select></div><div class="inline"><select class="form-control input-sm" id="select-background"><option value="white" selected="selected">White background</option><option value="black">Black background</option></select></div><div class="inline"><div class="inline viewer-focus-label"><span>Focus<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Move far and near clipping planes towards the center"></span></span></div><div class="inline viewer-focus-slider"><div class="inputRange"><input id="focusRange" type="range" min="0" max="100" step="1" value="0"><div id="focusValue" style="left: 5px;">0</div></div></div></div></div></div></div><div class="col-lg-3 col-md-4 col-sm-12 col-xs-12"><div id="nglControls"><div><div id="controls-tabs"><div id="structureViewTab" class="tab-active">Structure<br>View</div><div id="edmapsViewTab" class="tab-inactive">Electron<br>Density Maps</div><div id="ligandViewTab" class="tab-inactive">Ligand<br>View</div></div><div id="structureView" class="controls" style="display: block;"><div class="help-page"><a href="https://www.rcsb.org/pages/help/3dview#structure-view" target="_blank">Structure View Documentation</a></div><br><div class="row horiz-group"><div class="col-xs-5 label-right"><span>Assembly<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="View structure as asymmetric unit, biological assembly, unit cell, or stacked unit cells"></span></span></div><div class="col-xs-7"><select class="form-control input-sm" id="select-assembly"><option value="__AU">Asymmetric Unit</option><option value="BU1" selected="selected">Bioassembly 1</option><option value="UNITCELL">Unitcell</option><option value="SUPERCELL">Supercell</option></select></div></div><div class="row horiz-group"><div class="col-xs-5 label-right"><span>Model<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="View specific model for multi-model structure"></span></span></div><div class="col-xs-7"><select class="form-control input-sm" id="select-model"><option value="0" selected="selected">Model 1</option></select></div></div><div class="row horiz-group"><div class="col-xs-5 label-right"><span>Symmetry<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="View intrinsic molecular symmetry"></span></span></div><div class="col-xs-7"><select class="form-control input-sm" id="select-symmetry"><option value="-1" selected="selected">None</option><option value="0">C2 (global)</option><option value="1">D2 (pseudo)</option></select></div></div><div class="row horiz-group"><div class="col-xs-5 label-right"><span>Style<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="View the structure in different presentation styles"></span></span></div><div class="col-xs-7"><select class="form-control input-sm" id="select-style"><option value="">None</option><option value="backbone">Backbone</option><option value="surface">Surface</option><option value="cartoon" selected="selected">Cartoon</option><option value="spacefill">Spacefill</option><option value="licorice">Licorice</option><option value="line">Line</option></select></div></div><div class="row horiz-group"><div class="col-xs-5 label-right"><span>Color<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Color the structure using different schemes"></span></span></div><div class="col-xs-7"><select class="form-control input-sm" id="select-colorScheme"><option value="chainname">By Chain</option><option value="residueindex" selected="selected">Rainbow</option><option value="element">By Element/CPK</option><option value="resname">By Residue</option><option value="moleculetype">By Molecule Type</option><option value="bfactor">By B-factor</option><option value="sstruc">By Secondary Structure</option><option value="hydrophobicity">By Hydrophobicity</option><option value="geoquality">By Geometry Quality</option></select></div></div><div class="row horiz-group"><div class="col-xs-5 label-right"><span>Ligand<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Change ligand presentation style"></span></span></div><div class="col-xs-7"><select class="form-control input-sm" id="select-ligandStyle"><option value="">None</option><option value="ballandstick" selected="selected">Ball &amp; Stick</option><option value="spacefill">Spacefill</option></select></div></div><div class="row horiz-group"><div class="col-xs-5 label-right"><span>Quality<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Adjust rendering quality"></span></span></div><div class="col-xs-7"><select class="form-control input-sm" id="select-quality"><option value="auto" selected="selected">Automatic</option><option value="low">Low</option><option value="medium">Medium</option><option value="high">High</option></select></div></div><div class="row horiz-group"><div class="col-xs-6"><div class="checkbox-group"><span>Water<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Show/hide water molecules"></span></span><input type="checkbox" id="checkbox-water" class="checkbox-with-label"></div></div><div class="col-xs-6"><div class="checkbox-group"><span>Ions<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Show/hide ions"></span></span><input type="checkbox" id="checkbox-ion" class="checkbox-with-label" checked="checked"></div></div></div><div class="row horiz-group"><div class="col-xs-6"><div class="checkbox-group"><span>Hydrogens<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Show/hide hydrogen atoms"></span></span><input type="checkbox" id="checkbox-hydrogen" class="checkbox-with-label" checked="checked"></div></div><div class="col-xs-6"><div class="checkbox-group"><span>Clashes<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Show/hide clashes between atoms (indicated by pink disks) as specified in the Validation Report"></span></span><input type="checkbox" id="checkbox-clash" class="checkbox-with-label"></div></div></div><div class="text-right"><button id="btnDefaultStructureView" class="off"><span>Default Structure View</span><span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Reset to the default structure view"></span></button></div></div><div id="edmapsView" class="controls" style="display: none;"><div class="help-page"><a href="https://www.rcsb.org/pages/help/3dview#edmaps-view" target="_blank">Electron Density Maps Documentation</a></div><br><div class="message">There are no electron density maps for structure 4HHB</div></div><div id="ligandView" class="controls" style="display: none;"><div class="help-page"><a href="https://www.rcsb.org/pages/help/3dview#ligand-viewer" target="_blank">Ligand View Documentation</a></div><br><div id="ligandViewMessage" class="message">To begin select a ligand from the dropdown list.</div><div class="row horiz-group"><div class="col-xs-5 label-right"><span>Ligand<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Select the ligand to display"></span></span></div><div class="col-xs-7"><select class="form-control input-sm" id="select-ligandViewLigand"><option value="" selected="selected">None</option><option value="142:A">[HEM]142:A</option><option value="147:B">[PO4]147:B</option><option value="148:B">[HEM]148:B</option><option value="142:C">[HEM]142:C</option><option value="147:D">[PO4]147:D</option><option value="148:D">[HEM]148:D</option></select></div></div><div id="ligandViewControls" style="display: none;"><hr><div class="pocketLabel">Pocket</div><div class="row horiz-group" style=""><div class="col-xs-6 label-right"><span>Opacity<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Adjust the opacity of the ligand pocket from 0 - 100 percent"></span></span></div><div class="col-xs-6"><div class="inputRange"><input id="pocketOpacityRange" type="range" min="0" max="100" step="1" value="0"><div id="pocketOpacityValue" style="left: 1px;">0</div></div></div></div><div class="row horiz-group" style=""><div class="col-xs-6 label-right"><span>Near Clipping<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Adjust the clipping of the ligand pocket"></span></span></div><div class="col-xs-6"><div class="inputRange"><input id="pocketNearClippingRange" type="range" min="0" max="100" step="1" value="0"><div id="pocketNearClippingValue" style="left: 1px;">0</div></div></div></div><div class="row horiz-group" style=""><div class="col-xs-6 label-right"><span>Radius Clipping<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Adjust the radious clipping of the ligand pocket"></span></span></div><div class="col-xs-6"><div class="inputRange"><input id="pocketRadiusClippingRange" type="range" min="0" max="100" step="1" value="100"><div id="pocketRadiusClippingValue" style="left: 1px;">100</div></div></div></div><div class="vspace-10"></div><div class="row horiz-group"><div class="col-xs-5 label-right"><span>Color<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Color the pocket surface using different schemes"></span></span></div><div class="col-xs-7"><select class="form-control input-sm" id="select-pocketColor"><option value="hydrophobicity" selected="selected">By Hydrophobicity</option><option value="element">By Element/CPK</option><option value="bfactor">By B-factor</option></select></div></div><hr><div class="checkbox-group"><span>Hydrogen Bonds (blue)<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Show/hide hydrogen bonds. Donor and acceptor atoms within 3.5 Angstrom."></span></span><input type="checkbox" id="checkbox-hydrogenBond" class="checkbox-with-label" checked="checked"></div><div class="checkbox-group"><span>Halogen Bonds (turquoise)<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Show/hide halogen bonds. Candidate halogens atoms within 4.0 Angstrom of acceptor atoms."></span></span><input type="checkbox" id="checkbox-halogenBond" class="checkbox-with-label" checked="checked"></div><div class="checkbox-group"><span>Hydrophobic Contacts (grey)<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Show/hide hydrophobic interactions. Generally hydrocarbon and fluorine atoms within 4.0 Angstrom."></span></span><input type="checkbox" id="checkbox-hydrophobic" class="checkbox-with-label" checked="checked"></div><div class="checkbox-group"><span>Pi Interactions (orange, green)<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Show/hide cation-pi and pi-stacking interactions. Complexes of aromatic rings and positive charges."></span></span><input type="checkbox" id="checkbox-piInteraction" class="checkbox-with-label" checked="checked"></div><div class="checkbox-group"><span>Metal Interactions (purple)<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Show/hide metal interactions. Dative bonds and ionic/ionic-type interactions involving metals."></span></span><input type="checkbox" id="checkbox-metalCoordination" class="checkbox-with-label" checked="checked"></div><div class="vspace-10"></div><div class="checkbox-group"><span>Label<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Display labels for the ligand"></span></span><input type="checkbox" id="checkbox-label" class="checkbox-with-label" checked="checked"></div><div class="checkbox-group"><span>Polymer Display<span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Show or hide the current polymer display"></span></span><input type="checkbox" id="checkbox-polymerDisplay" class="checkbox-with-label"></div><div class="vspace-10"></div></div><div class="text-right"><button id="btnDefaultLigandView" class="off"><span>Default Ligand View</span><span class="fa fa-question-circle ngl-ui-help" data-toggle="tooltip" data-placement="top" title="" data-original-title="Set the default ligand view"></span></button></div></div></div></div></div></div><br><script>// handle viewer select
+function selectViewer() {
+    var val = $("#viewers").val()
+    console.log('val=' + val + ', pdbid=' + pdbid + ', bionumber=' + bionumber + ', viewerType=' + viewerType)
+    if (val === 'molstar') {
+        window.location.href = '/3d-view/' + pdbid
+    } else if (val === 'ngl') {
+        window.location.href = '/3d-view/ngl/' + pdbid
+    } else if (val === 'HTML5') {
+        var jmolBionumber = (bionumber === '0') ? '' : bionumber
+        window.location.href = '/pdb/explore/jmol.do?structureId=' + pdbid + '&bionumber=' + jmolBionumber + '&jmolMode=' + val
+    }
+}
+</script><div class="row"><div class="col-xs-6"><small><a href="https://github.com/arose/ngl" target="_blank">NGL</a> is a WebGL based 3D viewer powered by <a href="http://mmtf.rcsb.org/" target="_blank">MMTF</a>.</small></div><div class="col-xs-6" style="text-align: right"><small>Select a different viewer</small><select class="input-sm" id="viewers" style="margin-left:10px;" onchange="selectViewer()"><option value="molstar">Mol* (Javascript)</option><option value="ngl" selected="selected">NGL (WebGL)</option><option value="HTML5">JSmol (JavaScript)</option></select></div></div><br><div class="citation"><h5>Citation</h5><small><a href="http://www.rcsb.org/pages/policies#References">Cite images created</a>
+ with the PDB ID and associated publication, NGL Viewer (AS Rose et al. 
+(2018) NGL viewer: web-based molecular graphics for large complexes. 
+Bioinformatics <a href="http://dx.doi.org/10.1093/bioinformatics/bty419" target="_blank">doi:10.1093/bioinformatics/bty419</a>), and RCSB PDB.</small></div></div><script src="4hhb_files/redux.js"></script><script src="4hhb_files/preact.js"></script><script src="4hhb_files/ngl.js"></script><script src="4hhb_files/ngl-ui.js"></script><script>setStageHeight()
+setLoadingProgressBar()
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log('document.addEventListener: DOMContentLoaded')
+    stage = new NGL.Stage('stageViewport', { backgroundColor: "white", hoverTimeout: 150 })
+    if (blob && initNglUi ) {
+        initNglUi()
+    } else {
+        if (!blob) console.log('no blob')
+        if (!initNglUi) console.log('no initNglUi')
+    }
+})
+
+window.addEventListener("load", function () {
+    console.log('window.addEventListener: load')
+})
+
+// set stage height to <= stage width and >= stageWidth * .5625 (16:9 ratio)
+function setStageHeight() {
+    var stageWidth = $('#stageViewport').width()
+    var height = $(window).height() - ($('#header').height() + 410) // get approximate available height
+    height = Math.max(Math.min(stageWidth, height), stageWidth * .5625)
+    $('#stageViewport').height(height)
+}
+
+// set size and position loading progress bar
+function setLoadingProgressBar() {
+    var w = $('#stageViewport').width()
+    var h = $('#stageViewport').height()
+    //console.log(w + ' x ' + h)
+    $('#loading').width(w/2)
+    $('#progressBar').width(w/2)
+    $('#loading').css('top', h/2)
+    $('#loading').css('left', w/4)
+}
+
+// this function is called from ngl-ui.js only after the structure has been loaded and the ui has been rendered
+function initUi() {
+    $('[data-toggle="tooltip"]').tooltip()
+    setNglUiData()
+}
+
+var rangeInputs = [
+        'level2fofc',
+        'levelFofc',
+        'boxSize',
+        'pocketOpacity',
+        'pocketNearClipping',
+        'pocketRadiusClipping',
+        'focus'] // for getting/setting width of range inputs
+
+function setNglUiData() {
+    // HELP-14212 for older browsers, => functions do not work
+    for (var i = 0, n = rangeInputs.length; i < n; i++) {
+        var input = rangeInputs[i]
+        resizeNglUi(input, $('#' + input + 'Range').width())
+    }
+}
+
+/*
+    this function may be triggered by:
+        1) window resize
+        2) clicking 'Fullscreen' button
+        3) esc key in fullscreen mode
+*/
+function resizeStage() {
+    var fullscreen = ($('#ngl-ui').width() > $('#pdbid-and-buttons').width()) // test for fullscreen
+    if (fullscreen) {
+        $('#stageViewport').height($(window).height() - 114)
+    } else {
+        setStageHeight()
+    }
+    setLoadingProgressBar()
+    setNglUiData()
+
+    stage.viewer.handleResize()
+}
+
+// on resize
+$(window).on("resize",function() {
+    resizeStage()
+});</script></div><div class="hidden-print" id="footer_main"><div class="container"><div class="row"><div class="col-sm-12 col-md-12 col-lg-7 text-center"><ul class="col-xs-4 col-sm-12"><li><span class="row_header">About</span></li><li><a href="https://www.rcsb.org/pages/about-us/index">About Us</a></li><li><a href="https://www.rcsb.org/pages/policies#References">Citing Us</a></li><li><a href="https://www.rcsb.org/pages/publications">Publications</a></li><li><a href="https://www.rcsb.org/pages/team">Team</a></li><li><a href="https://www.rcsb.org/pages/jobs">Careers</a></li><li><a href="https://www.rcsb.org/pages/policies">Usage &amp; Privacy</a></li></ul><ul class="col-xs-4 col-sm-12"><li><span class="row_header">Help</span></li><li><a href="https://www.rcsb.org/pages/contactus">Contact Us</a></li><li><a href="https://www.rcsb.org/pages/help/index">Help Topics</a></li><li><a href="https://www.rcsb.org/pages/faq">Website FAQ</a></li><li><a href="https://www.rcsb.org/pages/help/glossary">Glossary</a></li></ul><ul class="col-xs-4 col-sm-12"><li><span class="row_header">RCSB Partners</span></li><li><a href="http://ndbserver.rutgers.edu/" target="_blank">Nucleic Acid Database</a></li></ul><ul class="col-xs-4 col-sm-12"><li><span class="row_header"><a href="http://wwpdb.org/" target="_blank" style="text-decoration: none; color: black">wwPDB Partners</a></span></li><li><a href="https://www.rcsb.org/">RCSB PDB</a></li><li><a href="http://www.ebi.ac.uk/pdbe/" target="_blank">PDBe</a></li><li><a href="http://www.pdbj.org/" target="_blank">PDBj</a></li><li><a href="http://www.bmrb.wisc.edu/" target="_blank">BMRB</a></li></ul></div><div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 text-center"><p>RCSB PDB (<a href="http://nar.oxfordjournals.org/content/28/1/235.abstract" target="blank">citation</a>) is hosted by</p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="//cdn.rcsb.org/rcsb-pdb//v2/common/images/Logo_Rutgers.png" alt="Logo_Rutgers.png" usemap="#rutgers-map" style="padding:0px 10px; border-right: 1px solid #000000;" height="26"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="//cdn.rcsb.org/rcsb-pdb//v2/common/images/Logo_UCSD-SDSC.png" alt="Logo_UCSD.png" usemap="#UCSD-SDSC-map" style="padding: 0px 10px; border-right: 1px solid #000000;" height="26"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="//cdn.rcsb.org/rcsb-pdb//v2/common/images/Logo_UCSF.png" alt="Logo_UCSF.png" usemap="#UCSF-map" style="padding-left: 10px;" height="26"><map name="rutgers-map"><area shape="rect" coords="0,0,115,26" href="http://www.rutgers.edu/" alt="Rutgers" target="_blank"></map><map name="UCSD-SDSC-map"><area shape="rect" coords="0,0,150,26" href="http://ucsd.edu/" alt="UCSD" target="_blank"><area shape="rect" coords="151,0,255,26" href="http://www.sdsc.edu/" alt="SDSC" target="_blank"></map><map name="UCSF-map"><area shape="rect" coords="0,0,64,26" href="http://www.ucsf.edu/" alt="UCSF" target="_blank"></map><p>RCSB PDB is a member of the<span id="pdbmembers_footer"><a href="https://www.wwpdb.org/" target="_blank"><img class="wwpdblogo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="//cdn.rcsb.org/rcsb-pdb//v2/common/images/Logo_wwpdb.png" alt="wwPDB"></a><a href="https://www.emdataresource.org/" target="_blank"><img id="emdatabanklogo_footer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="//cdn.rcsb.org/rcsb-pdb//v2/common/images/EMDataResourcelogo.png" alt="EMDataResource"></a></span></p></div></div></div></div><div id="footer_grant"><div class="container"><div class="row"><p>RCSB PDB is funded by
+ the <a href="http://www.nsf.gov/" target="_blank">National Science Foundation</a> (DBI-1832184),
+ the <a href="http://science.energy.gov/" target="_blank">US Department of Energy</a> (DE-SC0019749),
+ and the <a href="http://www.cancer.gov/" target="_blank">National Cancer Institute</a>,
+ <a href="http://www.niaid.nih.gov/" target="_blank">National Institute of Allergy and Infectious Diseases</a>,
+ and <a href="http://www.nigms.nih.gov/" target="_blank">National Institute of General Medical Sciences</a> of the <a href="http://www.nih.gov/" target="_blank">National Institutes of Health</a> under grant R01GM133198.</p></div></div></div><div id="jira-fdbck"><!-- Modal -->
+<div class="modal fade jira-fdbck-mdl" id="jira-fdbck-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <img src="4hhb_files/rcsb_logo.png" class="modal-logo" style="width: 40%; margin-bottom:10px">
+                <br>
+                <p>All questions and comments will receive a response in a timely manner.</p>
+                <p>Reporting an issue?  Please attach a screenshot, if possible.</p>
+                <p><a href="https://deposit.wwpdb.org/" target="_blank">Access OneDep to update/release in-progress structure depositions</a></p>
+            </div>
+            <div class="modal-body">
+                <form id="feedbackfrm" name="feedbackfrm" action="" method="POST">
+                    <fieldset class="hidden parameters">
+                        <input id="projectkey" name="projectkey" value="HELP" type="hidden">
+                        <input id="issuetype" name="issuetype" value="Bug" type="hidden">
+                    </fieldset>
+
+                    <div class="row">
+                        <!-- NAME -->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div id="fname-group" class="form-group">
+                                <label for="fname">First Name</label>
+                                <input type="text" class="form-control input-sm reqd" id="fname" name="fname">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div id="lname-group" class="form-group">
+                                <label for="lname">Last Name</label>
+                                <input type="text" class="form-control input-sm reqd" id="lname" name="lname">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div id="email-group" class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control input-sm reqd" id="email" name="email">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ISSUE -->
+                    <div id="subject-group" class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" class="form-control input-sm reqd" id="subject" name="subject">
+
+                    </div>
+                    <div id="description-group" class="form-group">
+                        <label for="description">Question, Comment, Feedback or Other</label>
+                        <textarea class="form-control input-sm reqd" id="description" name="description" rows="4"></textarea>
+                    </div>
+
+                    <!-- FILE UPLOAD -->
+                    <div id="file-group" class="form-group">
+                        <label for="file">Attach File(s)</label>
+                        <br>
+                        <small>Use CTRL or Shift keys to select more than one file (<span id="maxuploads"></span> files max)</small>
+                        <input type="file" id="file" name="file" class="form-control input-sm" multiple="">
+                    </div>
+
+                    <!-- Privacy Policy -->
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="privacyPolicyAgreement" id="privacyPolicyAgreement">
+                            I agree to the <a href="https://www.rcsb.org/pages/privacy-policy" target="_blank">Help Desk Privacy Policy</a>
+                        </label>
+                    </div>
+
+                    <!-- OPTIONAL -->
+                    <hr>
+                    <label>Optional: To help us learn more about our users, what is your:</label>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div id="institution-type-group" class="form-group">
+                                <label for="instype">Institution Type</label>
+                                <select class="form-control" id="instype">
+                                    <option selected="selected">College/University</option>
+                                    <option>Research Institute</option>
+                                    <option>Industry</option>
+                                    <option>Non-Profit Organization</option>
+                                    <option>Government</option>
+                                    <option>Hospital</option>
+                                    <option>K12/Primary-Secondary Education</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div id="role-group" class="form-group">
+                                <label for="role">Role</label>
+                                <select class="form-control" id="role">
+                                    <option selected="selected">Graduate Student</option>
+                                    <option>Postdoctoral Scholar</option>
+                                    <option>Faculty</option>
+                                    <option>Staff</option>
+                                    <option>Software Developer</option>
+                                    <option>Undergraduate Student</option>
+                                    <option>High School Teacher</option>
+                                    <option>High School Student</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div id="rsrch-intrst-group" class="form-group">
+                                <label for="rsrch-intrst">Main Research Interest</label>
+                                <select class="form-control" id="rsrch-intrst">
+                                    <option selected="selected">Biology and Biochemistry</option>
+                                    <option>Molecular Biology and Genetics</option>
+                                    <option>Computer Science</option>
+                                    <option>Chemistry</option>
+                                    <option>Microbiology</option>
+                                    <option>Pharmacology and Toxicology</option>
+                                    <option>Immunology</option>
+                                    <option>Physics</option>
+                                    <option>Clinical Medicine</option>
+                                    <option>Neuroscience and Behavior</option>
+                                    <option>Engineering</option>
+                                    <option>Plant and Animal Science</option>
+                                    <option>Materials Science</option>
+                                    <option>Environment/Ecology</option>
+                                    <option>Mathematics</option>
+                                    <option>Social Sciences, General</option>
+                                    <option>Agricultural Sciences</option>
+                                    <option>Space Science</option>
+                                    <option>Economics and Business</option>
+                                    <option>Geosciences</option>
+                                    <option>Psychiatry/Psychology</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="jira-fdbck-close" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                            <button id="jira-fdbck-submit" type="button" class="btn btn-primary btn-sm">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- confirmation/alert modal -->
+<div class="modal fade jira-fdbck-mdl" id="jira-cnfrm-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4"><img src="4hhb_files/rcsb_logo.png" class="modal-logo img-responsive center-block"></div>
+                    </div>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info" role="alert">Thank you for
+ providing your feedback! Someone will be in touch with you shortly. 
+This window will automatically close in 5 seconds.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade jira-fdbck-mdl" id="jira-nosrvr-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4"><img src="4hhb_files/rcsb_logo.png" class="modal-logo img-responsive center-block"></div>
+                    </div>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info" role="alert">Apologies, 
+our feedback server is currently unavailable and we are troubleshooting 
+the issue. In the meantime, please copy and paste the below information 
+into an email addressed to info@rcsb.org</div>
+                <div class="alert alert-info" role="alert" id="relaycontent"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact Us button -->
+<button type="button" class="btn btn-warning btn-xs pull-right jira-fdbck-btn hidden-print" id="contactus">Contact Us</button>
+</div><script src="4hhb_files/search.js"></script></body></html>
